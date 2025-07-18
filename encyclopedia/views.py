@@ -60,7 +60,7 @@ def index(request):
 
 def entry(request, entry_title):
     """View to display a specific entry."""
-    markdown = Markdown()
+    markdown = Markdown(extras=["fenced-code-blocks"])
     entry_content = util.get_entry(entry_title)
     if entry_content is None:
         return render(

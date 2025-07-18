@@ -15,6 +15,22 @@ Este proyecto implementa una enciclopedia web interactiva con las siguientes fun
 - 🔄 Conversión automática de Markdown a HTML usando la librería `markdown2`.
 - ⚠️ Páginas de error personalizadas para entradas no encontradas o duplicadas.
 
+## 📷 Capturas de Pantalla
+
+### Página principal (Index)
+![Index page](encyclopedia/static/encyclopedia/images/index.png)
+
+### Visualización de una entrada de Python
+![Python entry](encyclopedia/static/encyclopedia/images/entry_python.png)
+
+### Formulario para crear una nueva entrada
+![New entry form](encyclopedia/static/encyclopedia/images/new_entry.png)
+
+### Formulario para editar una entrada
+![Edit entry form](encyclopedia/static/encyclopedia/images/edit_entry.png)
+
+
+
 ## 🏛️ Antecedentes
 
 Inspirado en [Wikipedia](https://www.wikipedia.org/), este proyecto utiliza [Markdown](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) en lugar de Wikitext para almacenar entradas. Cada entrada es un archivo `.md` en la carpeta `entries/`, lo que simplifica la creación y edición de contenido. El contenido se convierte a HTML para su renderización en el navegador.
@@ -101,3 +117,4 @@ Inspirado en [Wikipedia](https://www.wikipedia.org/), este proyecto utiliza [Mar
 - 🖋️ Ahora el proyecto utiliza la fuente Linux Libertine a través de [cdnfonts](https://www.cdnfonts.com/linux-libertine.font) para asemejarse a Wikipedia.
 - 📱 El diseño es completamente responsivo gracias a media queries, adaptándose a computadoras, tablets y móviles.
 - 🟢 El código ha sido validado con pylint (10.00/10) y formateado con black, garantizando calidad y estilo profesional.
+
