@@ -1,3 +1,3 @@
-from django.db import models
+"""Models for encyclopedia app."""
 
-# Create your models here.
+# No models defined yet.

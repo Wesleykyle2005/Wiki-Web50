@@ -1,3 +1,3 @@
-from django.contrib import admin
+"""Admin configuration for encyclopedia app."""
 
-# Register your models here.
+# No admin models registered yet.

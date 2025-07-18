@@ -1,3 +1,3 @@
-from django.test import TestCase
+"""Tests for encyclopedia app."""
 
-# Create your tests here.
+# No tests defined yet.
