@@ -1,120 +1,132 @@
 # 📚 Wiki - CS50 Web Programming
 
-Una enciclopedia en línea inspirada en Wikipedia, desarrollada con Django. Las entradas se almacenan en formato Markdown y se convierten dinámicamente a HTML para su visualización.
+🗪 README.md en español: [README_ES.md](README_ES.md)
+
+An online encyclopedia inspired by Wikipedia, developed using Django. Entries are stored in Markdown format and dynamically converted to HTML for display.
 
 ---
 
-## 📝 Descripción
+## 📝 Description
 
-Este proyecto implementa una enciclopedia web interactiva con las siguientes funcionalidades:
-- 👁️ Visualización de entradas en `/wiki/TITULO`.
-- 🗂️ Lista de entradas con enlaces en la página de inicio.
-- 🔍 Búsqueda de entradas por coincidencia exacta o parcial.
-- ✍️ Creación y edición de entradas en formato Markdown.
-- 🎲 Acceso a una entrada aleatoria.
-- 🔄 Conversión automática de Markdown a HTML usando la librería `markdown2`.
-- ⚠️ Páginas de error personalizadas para entradas no encontradas o duplicadas.
+This project implements an interactive web-based encyclopedia with the following features:
 
-## 📷 Capturas de Pantalla
+* 👁️ Entry display via `/wiki/TITLE`.
+* 🗂️ Entry list with links on the homepage.
+* 🔍 Search functionality for exact or partial title matches.
+* ✍️ Entry creation and editing in Markdown format.
+* 🎲 Access to a random entry.
+* 🔄 Automatic Markdown to HTML conversion using the `markdown2` library.
+* ⚠️ Custom error pages for not found or duplicate entries.
 
-### Página principal (Index)
+## 📷 Screenshots
+
+### Index Page
+
 ![Index page](encyclopedia/static/encyclopedia/images/index.png)
 
-### Visualización de una entrada de Python
+### Viewing a Python Entry
+
 ![Python entry](encyclopedia/static/encyclopedia/images/entry_python.png)
 
-### Formulario para crear una nueva entrada
+### New Entry Form
+
 ![New entry form](encyclopedia/static/encyclopedia/images/new_entry.png)
 
-### Formulario para editar una entrada
+### Edit Entry Form
+
 ![Edit entry form](encyclopedia/static/encyclopedia/images/edit_entry.png)
 
+## 🏛️ Background
 
-
-## 🏛️ Antecedentes
-
-Inspirado en [Wikipedia](https://www.wikipedia.org/), este proyecto utiliza [Markdown](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) en lugar de Wikitext para almacenar entradas. Cada entrada es un archivo `.md` en la carpeta `entries/`, lo que simplifica la creación y edición de contenido. El contenido se convierte a HTML para su renderización en el navegador.
+Inspired by [Wikipedia](https://www.wikipedia.org/), this project uses [Markdown](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) instead of Wikitext to store entries. Each entry is a `.md` file located in the `entries/` directory, simplifying content creation and editing. The content is then converted to HTML for browser rendering.
 
 ---
 
-## 🗂️ Estructura del Proyecto
+## 🗂️ Project Structure
 
-- **`wiki/`**: Configuración del proyecto Django (`settings.py`, `urls.py`, etc.).
-- **`encyclopedia/`**: Aplicación principal.
-  - `views.py`: Lógica de las vistas y manejo de formularios.
-  - `urls.py`: Rutas de la aplicación.
-  - `util.py`: Funciones para gestionar entradas (listar, guardar, recuperar).
-  - `templates/encyclopedia/`:
-    - `layout.html`: Plantilla base con barra lateral y navegación.
-    - `index.html`: Lista de entradas.
-    - `entry.html`: Visualización de una entrada.
-    - `new_entry.html`: Formulario para crear entradas.
-    - `edit_entry.html`: Formulario para editar entradas.
-    - `error.html`, `404.html`: Páginas de error personalizadas.
-  - `static/encyclopedia/`: Archivos CSS y otros recursos estáticos.
-- **`entries/`**: Archivos Markdown de las entradas.
-- **`manage.py`**: Script de administración de Django.
+* **`wiki/`**: Django project configuration (`settings.py`, `urls.py`, etc.).
+* **`encyclopedia/`**: Main application.
 
----
+  * `views.py`: View logic and form handling.
+  * `urls.py`: Application routes.
+  * `util.py`: Utility functions for managing entries (listing, saving, retrieving).
+  * `templates/encyclopedia/`:
 
-## ✅ Requisitos y Funcionalidades
-
-- **Página de entrada**: `/wiki/TITULO` muestra el contenido Markdown convertido a HTML o un error 404 si no existe.
-- **Página de índice**: Muestra todas las entradas como enlaces a sus respectivas páginas.
-- **Búsqueda**: 
-  - Coincidencia exacta redirige a la entrada.
-  - Coincidencia parcial muestra una lista de resultados con enlaces.
-- **Nueva página**: Formulario para crear entradas, con validación para evitar duplicados.
-- **Editar página**: Formulario para modificar el contenido Markdown de una entrada.
-- **Página aleatoria**: Redirige a una entrada seleccionada al azar.
-- **Conversión Markdown a HTML**: Usa `markdown2` para convertir el contenido. Opcionalmente, implementa conversión manual con expresiones regulares.
+    * `layout.html`: Base template with sidebar and navigation.
+    * `index.html`: Entry list.
+    * `entry.html`: Entry display.
+    * `new_entry.html`: Entry creation form.
+    * `edit_entry.html`: Entry editing form.
+    * `error.html`, `404.html`: Custom error pages.
+  * `static/encyclopedia/`: CSS and other static assets.
+* **`entries/`**: Markdown files for encyclopedia entries.
+* **`manage.py`**: Django management script.
 
 ---
 
-## ⚙️ Instalación
+## ✅ Requirements and Features
 
-1. 🌀 Clona el repositorio:
+* **Entry page**: `/wiki/TITLE` displays the HTML-rendered Markdown content or a 404 error if not found.
+* **Index page**: Lists all entries as links to their respective pages.
+* **Search**:
+
+  * Exact match redirects to the corresponding entry.
+  * Partial match displays a list of results with links.
+* **New page**: Form to create entries, with validation to prevent duplicates.
+* **Edit page**: Form to modify the Markdown content of an entry.
+* **Random page**: Redirects to a randomly selected entry.
+* **Markdown to HTML conversion**: Uses `markdown2` to render content. Optionally, manual conversion via regex is supported.
+
+---
+
+## ⚙️ Installation
+
+1. 🌀 Clone the repository:
+
    ```bash
    git clone https://github.com/Wesleykyle2005/Wiki-Web50
    cd Wiki-Web50
    ```
-2. 🛡️ (Opcional) Crea y activa un entorno virtual:
+2. 🛡️ (Optional) Create and activate a virtual environment:
+
    ```bash
    python -m venv venv
    source venv/bin/activate  # Windows: venv\Scripts\activate
    ```
-3. 📦 Instala las dependencias:
+3. 📦 Install dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
-4. 🗄️ Aplica las migraciones de Django:
+4. 🗄️ Apply Django migrations:
+
    ```bash
    python manage.py migrate
    ```
-5. 🚀 Inicia el servidor de desarrollo:
+5. 🚀 Start the development server:
+
    ```bash
    python manage.py runserver
    ```
 
 ---
 
-## 💡 Ejemplo de Uso
+## 💡 Usage Example
 
-- 🌐 Accede a `http://127.0.0.1:8000/` en tu navegador.
-- 🔍 Busca entradas por nombre o subcadena desde la barra lateral.
-- 📝 Crea nuevas entradas con el enlace "Create New Page".
-- ✏️ Edita entradas existentes desde su página.
-- 🎲 Accede a una entrada aleatoria con "Random Page".
-- 📁 Las entradas se almacenan como archivos `.md` en la carpeta `entries/`.
+* 🌐 Open `http://127.0.0.1:8000/` in your browser.
+* 🔍 Search for entries by name or substring using the sidebar.
+* 📝 Create new entries via the "Create New Page" link.
+* ✏️ Edit existing entries from their entry page.
+* 🎲 Visit a random entry using the "Random Page" link.
+* 📁 Entries are stored as `.md` files in the `entries/` directory.
 
 ---
 
-## 🏅 Buenas Prácticas y Consejos
+## 🏅 Best Practices and Tips
 
-- 🛡️ Usa el filtro `|safe` en las plantillas para renderizar HTML generado desde Markdown: `{{ variable|safe }}`.
-- 🗂️ Mantén los nombres de los archivos Markdown iguales al título de la entrada para evitar confusiones.
-- 📖 Revisa la [guía de Markdown de GitHub](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) para entender la sintaxis soportada.
-- 🖋️ Ahora el proyecto utiliza la fuente Linux Libertine a través de [cdnfonts](https://www.cdnfonts.com/linux-libertine.font) para asemejarse a Wikipedia.
-- 📱 El diseño es completamente responsivo gracias a media queries, adaptándose a computadoras, tablets y móviles.
-- 🟢 El código ha sido validado con pylint (10.00/10) y formateado con black, garantizando calidad y estilo profesional.
-
+* 🛡️ Use the `|safe` filter in templates to render HTML generated from Markdown: `{{ variable|safe }}`.
+* 🗂️ Keep Markdown filenames identical to entry titles to avoid confusion.
+* 📖 Refer to [GitHub's Markdown guide](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) to understand supported syntax.
+* 🖋️ The project now uses the Linux Libertine font via [cdnfonts](https://www.cdnfonts.com/linux-libertine.font) to resemble Wikipedia's aesthetic.
+* 📱 The design is fully responsive using media queries, adapting to desktop, tablet, and mobile devices.
+* 🟢 The code has been validated with pylint (10.00/10) and formatted with Black, ensuring professional quality and style.
